@@ -1,0 +1,66 @@
+.showreel {
+  background-color: var(--light-color);
+  padding-block: 155px;
+
+  @include small-tablet {
+    padding-block: 75px;
+  }
+
+  &__video-wrapper {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 665px;
+    border: var(--border);
+    object-fit: cover;
+    background-color: var(--dark-color);
+    // display: flex;
+    z-index: 0;
+    @include mobile {
+      height: 400px;
+    }
+  }
+
+  &__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @include hover {
+      & + .showreel__btn {
+        background-color: var(--accent-color);
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 323px;
+    height: 80px;
+    transform: translate(-50%, -50%);
+    background-color: var(--light-color);
+    z-index: 2;
+
+    @include small-tablet {
+      width: 280px;
+    }
+
+    @include mobile {
+      width: 180px;
+    }
+  }
+}
+
+.video--enabled {
+  cursor: pointer;
+}

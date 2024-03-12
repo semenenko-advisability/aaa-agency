@@ -2,11 +2,30 @@
 // colors
 :root {
   // base
-  --font-family: "Open Sans", sans-serif;
-  --content-width: 1170px;
+  --font-family: "Play", sans-serif;
+
+  --content-width: 1296px;
   --container-offset: 15px;
+  // --container-offset: 0px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // colors
-  --light-color: #fff;
+  --light-color: #e6e6e6;
+  --dark-color: #121212;
+  --accent-color: #ffdd55;
+
+  --bg-main-color: #f15423;
+  --bg-secondary-color: #2b60e2;
+
+  --transition: 0.3s;
+
+  --border: 2px solid var(--dark-color);
+
+  --line-text-gap: 70px;
+
+  --verticals-image-height: 340px;
+
+  // @include tablet {
+  //   --container-offset: 46px;
+  // }
 }

@@ -1,0 +1,41 @@
+.line {
+  background-color: var(--light-color);
+
+  &__container {
+    min-width: 1502px;
+    overflow: hidden;
+    gap: var(--line-text-gap);
+    align-items: center;
+    height: 60px;
+    @include mobile {
+      height: 51px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 123%;
+    text-transform: uppercase;
+    white-space: nowrap;
+    animation: scroll 20s linear infinite;
+
+    @include tablet {
+      font-size: 18px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--line-text-gap)));
+  }
+}

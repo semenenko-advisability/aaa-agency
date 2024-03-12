@@ -1,0 +1,87 @@
+.header {
+  background-color: var(--bg-main-color);
+
+  &__container {
+    justify-content: space-between;
+    height: 61px;
+  }
+
+  &__logo-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-left: var(--container-offset);
+    padding-right: 50px;
+    border-right: var(--border);
+
+    @include tablet {
+      --container-offset: 46px;
+    }
+
+    @include big-mobile {
+      --container-offset: 20px;
+    }
+
+    @include mobile {
+      border-right: none;
+      padding-right: 0;
+    }
+  }
+
+  &__logo {
+    color: var(--dark-color);
+    line-height: 100%;
+
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+}
+
+.contacts {
+  display: flex;
+  height: 100%;
+  border-left: var(--border);
+  box-shadow: 2px 0 var(--dark-color);
+
+  @include mobile {
+    display: none;
+  }
+
+  &__item + &__item {
+    border-left: var(--border);
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 122px;
+    color: var(--dark-color);
+    line-height: 123%;
+    border: none;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: capitalize;
+
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+}
+
+.logo {
+  &:focus {
+    outline: none;
+  }
+}
+.logo.focus-visible {
+  outline-offset: 3px;
+  outline: 2px solid var(--accent-color);
+}
+
+.footer__logo.focus-visible {
+  outline: 2px solid var(--dark-color);
+  outline-offset: 3px;
+}
