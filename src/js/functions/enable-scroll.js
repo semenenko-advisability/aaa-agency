@@ -9,10 +9,11 @@ export const enableScroll = () => {
 
   vars.bodyEl.style.top = 'auto';
   vars.bodyEl.classList.remove('dis-scroll');
+  vars.htmlEl.style.scrollBehavior = 'auto';
   window.scroll({
     top: pagePosition,
     left: 0
   });
   vars.bodyEl.removeAttribute('data-position');
-  vars.htmlEl.style.scrollBehavior = 'smooth';
+  // vars.htmlEl.style.scrollBehavior = 'smooth';
 }

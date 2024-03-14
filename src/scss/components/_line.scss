@@ -2,7 +2,7 @@
   background-color: var(--light-color);
 
   &__container {
-    min-width: 1502px;
+    max-width: 1502px;
     overflow: hidden;
     gap: var(--line-text-gap);
     align-items: center;

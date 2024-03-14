@@ -1,13 +1,13 @@
 .hero {
   background-color: var(--bg-main-color);
-  padding-block: 126px 214px;
+  padding-block: 189px 214px;
 
   @include small-tablet {
-    padding-block: 134px 301px;
+    padding-block: 197px 301px;
   }
 
   @include big-mobile {
-    padding-block: 30px 34px;
+    padding-block: 93px 34px;
   }
 
   &__container {
@@ -15,19 +15,20 @@
     padding-left: calc(28.8vw - var(--container-offset));
     z-index: 1;
 
+    @include small-tablet {
+      padding-left: 0;
+    }
+
     @include big-mobile {
       padding-top: 130px;
-      padding-left: 16vw;
       // --container-offset: 20px;
     }
 
-    @include mobile {
+    @include small-mobile {
       padding-top: 100px;
-      padding-left: 8vw;
     }
 
     @include small-mobile {
-      padding-left: 0;
     }
 
     &::before {
@@ -57,7 +58,7 @@
         --container-offset: 20px;
         width: 120px;
 
-        @include mobile {
+        @include small-mobile {
           width: 80px;
         }
       }
@@ -81,30 +82,41 @@
       font-size: 70px;
       line-height: 110%;
       margin-bottom: 69px;
+      margin-left: 50%;
+      transform: translateX(-34%);
+      // margin-left: calc(28.8vw - var(--container-offset));
     }
 
     @include big-mobile {
       font-size: 60px;
       margin-bottom: 150px;
+      transform: translateX(-40%);
     }
 
     @include mobile {
+      font-size: 50px;
+      transform: translateX(-47%);
+    }
+
+    @include small-mobile {
       font-size: 40px;
+      transform: translateX(-57%);
     }
   }
 
   &__btn {
     width: 330px;
-    height: 80px;
 
     @include small-tablet {
+      margin-left: 50%;
+      // position: absolute;
       width: 282px;
-      height: 68px;
+      // left: 50%;
+      transform: translateX(-50%);
     }
 
     @include mobile {
-      width: 280px;
-      height: 50px;
+      width: min(280px, 100%);
     }
   }
 }

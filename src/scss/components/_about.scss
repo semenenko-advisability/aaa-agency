@@ -13,6 +13,7 @@
 
     @include mobile {
       grid-template-columns: repeat(1, 1fr);
+      margin-bottom: 63px;
     }
   }
 
@@ -31,6 +32,11 @@
     @include small-tablet {
       margin-bottom: 24px;
     }
+
+    @include mobile {
+      font-size: 30px;
+      margin-bottom: 13px;
+    }
   }
 
   &__description {
@@ -47,6 +53,7 @@
     }
 
     @include mobile {
+      font-size: 14px;
       margin-bottom: 63px;
     }
   }
@@ -58,6 +65,7 @@
     will-change: height;
     transition: height var(--transition) ease-in-out;
     z-index: 2;
+
     @include mobile {
       display: none;
     }
@@ -83,6 +91,10 @@
 
     @include small-tablet {
       width: 374px;
+    }
+
+    @include mobile {
+      width: 280px;
     }
   }
 }
@@ -195,6 +207,10 @@
     @include small-tablet {
       font-size: 18px;
     }
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 
   &__icon {
@@ -215,15 +231,21 @@
       background-repeat: no-repeat;
       background-position: 50%;
       background-size: contain;
+      transition: transform var(--transition) ease-in-out;
 
       @include small-tablet {
         width: 30px;
+      }
+
+      @include mobile {
+        transform: translate(-50%, -50%);
       }
     }
   }
 
   &__content {
     position: absolute;
+    box-sizing: content-box;
     left: 100%;
     width: 100%;
     width: min(calc(var(--content-width) / 2), 50vw);
@@ -238,24 +260,42 @@
     border-bottom: var(--border);
     // display: none;
     // height: 350px;
+    // will-change: max-height;
 
     @include small-tablet {
       padding: 35px 37px;
     }
 
     @include mobile {
+      margin-top: -2px;
       position: relative;
       left: 0;
       width: 100%;
+      max-height: 0;
+      // opacity: 0;
+      overflow: hidden;
+      padding-block: 0px;
+      padding-inline: 37px;
+      will-change: max-height;
+      transition: transform var(--transition) ease-in-out,
+        max-height var(--transition) ease-in-out,
+        padding var(--transition) ease-in-out;
     }
 
     &[aria-hidden="false"] {
       transform: translateY(-2px);
       z-index: 1;
+      padding-block: 43px;
+      // max-height: max-content;
       // display: none;
+
+      @include small-tablet {
+        padding-inline: 35px;
+      }
 
       @include mobile {
         transform: translateY(2px);
+        // opacity: 1;
       }
     }
     &[aria-hidden="true"] {
@@ -265,7 +305,8 @@
 
       @include mobile {
         transform: translateY(2px);
-        display: none;
+        // display: none;
+        // max-height: 0;
       }
     }
   }

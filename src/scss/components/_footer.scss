@@ -1,6 +1,10 @@
 .footer {
   background-color: var(--light-color);
-  height: 80px;
+  height: 78px;
+
+  @include small-mobile {
+    height: 52px;
+  }
 
   &__container {
     display: flex;
@@ -16,14 +20,35 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 50%;
+
+    @include small-mobile {
+      width: 33px;
+    }
   }
 
   &__copyright {
     display: flex;
     height: 100%;
+    line-height: 123%;
+    text-transform: uppercase;
     justify-content: center;
     align-items: center;
     border-left: var(--border);
     padding-left: 69px;
+
+    @include small-tablet {
+      font-size: 14px;
+      padding-left: 45px;
+    }
+
+    @include small-mobile {
+      padding-left: 24px;
+      font-size: 10px;
+    }
   }
+}
+
+.footer__logo.focus-visible {
+  outline: 2px solid var(--dark-color);
+  outline-offset: 3px;
 }
