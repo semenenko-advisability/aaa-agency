@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const accordions = document.querySelectorAll('.accordion');
   const accordionContent = document.querySelector(".about__content");
 
-  accordionContent.style.height = document.querySelector(".accordion--open").querySelector('.accordion__content').scrollHeight + "px";
+  accordionContent.style.height = document.querySelector(".accordion").querySelector('.accordion__content').scrollHeight + "px";
 
 	accordions.forEach(el => {
 		el.addEventListener('click', (e) => {
@@ -40,4 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
       el.querySelector('.accordion__content').style.maxHeight = el.querySelector('.accordion__content').scrollHeight + 'px';
     }
 	});
+  if (window.innerWidth > 576) {
+    document.querySelector(".accordion").querySelector('.accordion__control').click();
+  }
 });
