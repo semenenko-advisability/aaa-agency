@@ -30,7 +30,7 @@
     <div class="site-container">
       <header class="header border-bottom fixed-block">
   <div class="container--no-padding flex header__container">
-    <div class="header__logo-wrapper">
+    <div class="header__logo-wrapper" data-aos="fade-left">
       <a href="" class="logo header__logo"
         >AAA Agency / Influence<br />
         & Special Projects
@@ -38,13 +38,26 @@
     </div>
     <ul class="list-reset contacts">
       <li class="contacts__item">
-        <a href="#" class="btn contacts__link">Instagram</a>
+        <a
+          href="blog.html"
+          class="btn contacts__link"
+          >blog</a
+        >
       </li>
       <li class="contacts__item">
-        <a href="#" class="btn contacts__link">Linkedin</a>
+        <a
+          href="contacts.html"
+          class="btn contacts__link"
+          >Contacts</a
+        >
       </li>
     </ul>
-    <button class="btn-reset burger" aria-label="Open menu" aria-expanded="false" data-burger>
+    <button
+      class="btn-reset burger"
+      aria-label="Open menu"
+      aria-expanded="false"
+      data-burger
+    >
       <span class="burger__line"></span>
     </button>
   </div>
@@ -525,53 +538,41 @@
   <div class="platforms__container border-block">
     <ul class="list-reset platforms__partner-list partner-list grid" title="">
       <li class="partner-list__item">
-        <a
-          href="#"
-          target="_blank"
+        <div
           class="partner-list__link partner-list__link--youtube"
           aria-label="Youtube"
           ></svg
-        ></a>
+        ></div>
       </li>
       <li class="partner-list__item">
-        <a
-          href="#"
-          target="_blank"
+        <div
           class="partner-list__link partner-list__link--tiktok"
           aria-label="TikTok"
-        ></a>
+        ></div>
       </li>
       <li class="partner-list__item">
-        <a
-          href="#"
-          target="_blank"
+        <div
           class="partner-list__link partner-list__link--insta"
           aria-label="Instagram"
-        ></a>
+        ></div>
       </li>
       <li class="partner-list__item">
-        <a
-          href="#"
-          target="_blank"
+        <div
           class="partner-list__link partner-list__link--twitch"
           aria-label="Twitch"
-        ></a>
+        ></div>
       </li>
       <li class="partner-list__item">
-        <a
-          href="#"
-          target="_blank"
+        <div
           class="partner-list__link partner-list__link--discord"
           aria-label="Discord"
-        ></a>
+        ></div>
       </li>
       <li class="partner-list__item">
-        <a
-          href="#"
-          target="_blank"
+        <div
           class="partner-list__link partner-list__link--reddit"
           aria-label="Reddit"
-        ></a>
+        ></div>
       </li>
     </ul>
   </div>
@@ -600,15 +601,13 @@
         <div class="accordion__content" aria-hidden="true">
           <h3 class="accordion__title">what we do</h3>
           <ul class="accordion__item-list item-list list-reset">
-            <li class="item-list__item">Preparation of a creative brief</li>
+            <li class="item-list__item">Development of a presence strategy</li>
             <li class="item-list__item">
-              Strategy development based on analytical data
+              Market, competitor and trend analysis
             </li>
+            <li class="item-list__item">Media planning</li>
             <li class="item-list__item">
-              Development of creative solutions for a variety of budgets
-            </li>
-            <li class="item-list__item">
-              Full cycle of work within a special project
+              Complete management of client-influencer cooperation
             </li>
             <li class="item-list__item">Analytics and reporting</li>
           </ul>
@@ -625,6 +624,10 @@
         <div class="accordion__content" aria-hidden="true">
           <h3 class="accordion__title">what we do</h3>
           <ul class="accordion__item-list item-list list-reset">
+            <li class="item-list__item">Preparation of a creative brief</li>
+            <li class="item-list__item">
+              Strategy development based on analytical data
+            </li>
             <li class="item-list__item">
               Development of creative solutions for a variety of budgets
             </li>
@@ -692,7 +695,9 @@
     <div class="about__content"></div>
   </div>
   <div class="container about__btn-container">
-    <a href="#form" class="btn about__btn btn-reset" data-scroll>Submit an application</a>
+    <a href="#form" class="btn about__btn btn-reset" data-scroll
+      >Submit an application</a
+    >
   </div>
 </section>
 
@@ -707,7 +712,8 @@
         class="showreel__video"
         aria-hidden="true"
       >
-        <source src="space.mp4" type="video/mp4" />
+        <source src="AAA_SR_2.webm" type="video/webm" />
+        <source src="AAA_SR_2.mp4" type="video/mp4" />
       </video>
       <picture>
         <source srcset="img/video-poster.webp" type="image/webp" />
@@ -725,7 +731,7 @@
   </div>
 </section>
 
-        <section class="boost" data-menu>
+        <section class="boost-1">
   <div class="container boost__container">
     <div class="boost__content">
       <h2 class="boost__title">Boost<br />Your Brand</h2>
@@ -734,52 +740,318 @@
         create brand advocates and level up your engagement game!
       </p>
     </div>
-    <div class="boost__form-wrapper">
-      <form action="" id="form" class="form boost__form">
+    <div class="boost__form-wrapper" id="form">
+      <!-- <form action="" id="form" class="form boost__form">
+        <span class="form__description">* Required information</span>
         <label class="form__field">
-          <span class="visually-hidden">Your First Name</span>
+          <span class="visually-hidden">Your name</span>
           <input
             type="text"
             name="name"
-            placeholder="First Name*"
+            placeholder="Your name*"
             required
             class="input-reset form__input"
           />
         </label>
         <label class="form__field">
-          <span class="visually-hidden">Your Email</span>
+          <span class="visually-hidden">Your e-mail</span>
           <input
             type="email"
             name="email"
-            placeholder="Твой email*"
+            placeholder="Your e-mail*"
             required
             class="input-reset form__input"
           />
         </label>
         <label class="form__field">
-          <span class="visually-hidden">Link to your brand or project</span>
+          <span class="visually-hidden">Your company or project (link)</span>
           <input
             type="url"
             name="url"
-            placeholder="Link to your brand or project"
+            required
+            placeholder="Your company or project (link)*"
             class="input-reset form__input"
           />
         </label>
-        <button class="btn-reset btn form__btn" type="submit">send</button>
-      </form>
+        <label class="form__field">
+          <span class="visually-hidden"
+            >Your influence marketing goals and KPIs*</span
+          >
+          <input
+            type="text"
+            name="kpi"
+            required
+            placeholder="Your influence marketing goals and KPIs*"
+            class="input-reset form__input"
+          />
+        </label>
+        <label class="form__checkbox check">
+          <input
+            class="check__input visually-hidden"
+            type="checkbox"
+            required
+            checked
+          />
+          <span class="check__box"></span>
+          By clicking 'CONTACT US' you accept the
+          <a href="#" class="check__link" target="_blank">Privacy Policy</a> and
+          <a href="#" class="check__link" target="_blank">Terms of Use</a>
+        </label>
+        <button class="btn-reset btn form__btn" type="submit">
+          contact us
+        </button>
+      </form> -->
+
+      <div
+        id="hbspt-form-94940365-8f02-4de3-a8ab-a207e5ccb9f5"
+        class="hbspt-form"
+        data-hs-forms-root="true"
+      >
+        <form
+          id="hsForm_6e8e5564-d82b-48c8-9136-f5474e8bb3a9"
+          method="POST"
+          accept-charset="UTF-8"
+          enctype="multipart/form-data"
+          novalidate=""
+          action="https://forms.hsforms.com/submissions/v3/public/submit/formsnext/multipart/8095513/6e8e5564-d82b-48c8-9136-f5474e8bb3a9"
+          class="hs-form-private hsForm_6e8e5564-d82b-48c8-9136-f5474e8bb3a9 hs-form-6e8e5564-d82b-48c8-9136-f5474e8bb3a9 hs-form-6e8e5564-d82b-48c8-9136-f5474e8bb3a9_94940365-8f02-4de3-a8ab-a207e5ccb9f5 form boost__form hs-form"
+          target="target_iframe_6e8e5564-d82b-48c8-9136-f5474e8bb3a9"
+          data-instance-id="94940365-8f02-4de3-a8ab-a207e5ccb9f5"
+          data-form-id="6e8e5564-d82b-48c8-9136-f5474e8bb3a9"
+          data-portal-id="8095513"
+          data-test-id="hsForm_6e8e5564-d82b-48c8-9136-f5474e8bb3a9"
+        >
+          <div
+            class="hs_firstname hs-firstname hs-fieldtype-text field hs-form-field"
+          >
+            <label
+              id="label-firstname-6e8e5564-d82b-48c8-9136-f5474e8bb3a9"
+              class=""
+              placeholder="Enter your "
+              for="firstname-6e8e5564-d82b-48c8-9136-f5474e8bb3a9"
+              ><span></span
+            ></label>
+            <legend class="hs-field-desc" style="display: none"></legend>
+            <div class="input">
+              <input
+                id="firstname-6e8e5564-d82b-48c8-9136-f5474e8bb3a9"
+                name="firstname"
+                required=""
+                placeholder="Your name**"
+                type="text"
+                class="hs-input form__validation-error"
+                inputmode="text"
+                autocomplete="given-name"
+                value=""
+              />
+            </div>
+            <ul class="no-list form__error-message" role="alert">
+              <li>
+                <label class="hs-error-msg hs-main-font-element"
+                  >Please complete this required field.</label
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="hs_email hs-email hs-fieldtype-text field hs-form-field">
+            <label
+              id="label-email-6e8e5564-d82b-48c8-9136-f5474e8bb3a9"
+              class=""
+              placeholder="Enter your "
+              for="email-6e8e5564-d82b-48c8-9136-f5474e8bb3a9"
+              ><span></span
+            ></label>
+            <legend class="hs-field-desc" style="display: none"></legend>
+            <div class="input">
+              <input
+                id="email-6e8e5564-d82b-48c8-9136-f5474e8bb3a9"
+                name="email"
+                required=""
+                placeholder="Your e-mail**"
+                type="email"
+                class="hs-input form__validation-error"
+                inputmode="email"
+                autocomplete="email"
+                value=""
+              />
+            </div>
+            <ul class="no-list form__error-message" role="alert">
+              <li>
+                <label class="hs-error-msg hs-main-font-element"
+                  >Please complete this required field.</label
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="hs_link_to_your_app hs-link_to_your_app hs-fieldtype-text field hs-form-field"
+          >
+            <label
+              id="label-link_to_your_app-6e8e5564-d82b-48c8-9136-f5474e8bb3a9"
+              class=""
+              placeholder="Enter your "
+              for="link_to_your_app-6e8e5564-d82b-48c8-9136-f5474e8bb3a9"
+              ><span></span
+            ></label>
+            <legend class="hs-field-desc" style="display: none"></legend>
+            <div class="input">
+              <input
+                id="link_to_your_app-6e8e5564-d82b-48c8-9136-f5474e8bb3a9"
+                name="link_to_your_app"
+                required=""
+                placeholder="Your company or project (link)**"
+                type="text"
+                class="hs-input form__validation-error"
+                inputmode="text"
+                value=""
+              />
+            </div>
+            <ul class="no-list form__error-message" role="alert">
+              <li>
+                <label class="hs-error-msg hs-main-font-element"
+                  >Please complete this required field.</label
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="hs_what_are_your_marketing_goals_ hs-what_are_your_marketing_goals_ hs-fieldtype-text field hs-form-field"
+          >
+            <label
+              id="label-what_are_your_marketing_goals_-6e8e5564-d82b-48c8-9136-f5474e8bb3a9"
+              class=""
+              placeholder="Enter your "
+              for="what_are_your_marketing_goals_-6e8e5564-d82b-48c8-9136-f5474e8bb3a9"
+              ><span></span
+            ></label>
+            <legend class="hs-field-desc" style="display: none"></legend>
+            <div class="input">
+              <input
+                id="what_are_your_marketing_goals_-6e8e5564-d82b-48c8-9136-f5474e8bb3a9"
+                name="what_are_your_marketing_goals_"
+                required=""
+                placeholder="Your influence marketing goals and KPIs**"
+                type="text"
+                class="hs-input form__validation-error"
+                inputmode="text"
+                value=""
+              />
+            </div>
+            <ul class="no-list form__error-message" role="alert">
+              <li>
+                <label class="hs-error-msg hs-main-font-element"
+                  >Please complete this required field.</label
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="legal-consent-container">
+            <div>
+              <div class="hs-dependent-field">
+                <div
+                  class="hs_LEGAL_CONSENT.subscription_type_9875866 hs-LEGAL_CONSENT.subscription_type_9875866 hs-fieldtype-booleancheckbox field hs-form-field"
+                >
+                  <legend class="hs-field-desc" style="display: none"></legend>
+                  <div class="input">
+                    <ul class="inputs-list" required="">
+                      <li class="hs-form-booleancheckbox">
+                        <label
+                          for="LEGAL_CONSENT.subscription_type_9875866-6e8e5564-d82b-48c8-9136-f5474e8bb3a9"
+                          class="hs-form-booleancheckbox-display"
+                          ><input
+                            id="LEGAL_CONSENT.subscription_type_9875866-6e8e5564-d82b-48c8-9136-f5474e8bb3a9"
+                            class="hs-input"
+                            type="checkbox"
+                            name="LEGAL_CONSENT.subscription_type_9875866"
+                            value="true"
+                          /><span
+                            ><p>
+                              <span class="check__box"></span>By clicking
+                              'Contact us' you accept the
+                              <a
+                                href="https://aaagncy.com/wp-content/uploads/2024/04/Privacy-Policy.pdf"
+                                target="_blank"
+                                rel="noopener"
+                                >Privacy Policy</a
+                              >
+                              and
+                              <a
+                                href="https://aaagncy.com/wp-content/uploads/2024/04/Terms-and-Conditions.pdf"
+                                target="_blank"
+                                rel="noopener"
+                                >Terms of Use</a
+                              >
+                            </p>
+                            <span class="hs-form-required">*</span></span
+                          ></label
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <ul class="no-list form__error-message" role="alert">
+                    <li>
+                      <label class="hs-error-msg hs-main-font-element"
+                        >Please complete this required field.</label
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <legend
+                class="hs-field-desc checkbox-desc"
+                style="display: none"
+              ></legend>
+            </div>
+          </div>
+          <div class="hs_error_rollup">
+            <ul class="no-list form__error-message" style="display: block">
+              <li>
+                <label class="hs-main-font-element"
+                  >Please complete all required fields.</label
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="hs_submit hs-submit">
+            <div class="hs-field-desc" style="display: none"></div>
+            <div class="actions">
+              <input type="submit" class="btn form__btn" value="Submit" />
+            </div>
+          </div>
+          <input
+            name="hs_context»
+            type="hidden»
+            value='{"embedAtTimestamp»:"1717137652683»,"formDefinitionUpdatedAt»:"1717137643637»,"lang»:"en»,"legalConsentOptions»:"{\"communicationConsentCheckboxes\»: [{\"communicationTypeId\»: 9875866,\"label\»:\"<p><span class=\\\"check__box\\\"></span>By clicking &apos; Contact us&apos; you accept the <a href=\\\"https://aaagncy.com/wp-content/uploads/2024/04/Privacy-Policy.pdf\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">Privacy Policy</a> and <a href=\\\"https://aaagncy.com/wp-content/uploads/2024/04/Terms-and-Conditions.pdf\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">Terms of Use</a></p>\»,\"required\»: true}],\"legitimateInterestLegalBasis\»:\"LEGITIMATE_INTEREST_PQL\»,\"processingConsentType\»:\"IMPLICIT\»,\"processingConsentCheckboxLabel\»:\"I agree to allow AlfaLeads to store and process my personal data.\»,\"isLegitimateInterest\»: false}»,"embedType»:"REGULAR»,"renderRawHtml»:"true»,"userAgent»:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36»,"pageTitle»:"AAA Agency»,"pageUrl»:"http://localhost:8888/aaagncy.com/#form»,"referrer»:"http://localhost:8888/aaagncy.com/»,"isHubSpotCmsGeneratedPage»: false,"formTarget»:»#hbspt-form-94940365-8f02-4de3-a8ab-a207e5ccb9f5»,"boolCheckBoxFields»:"LEGAL_CONSENT.subscription_type_9875866»,"rumScriptExecuteTime»: 522.4000000003725,"rumTotalRequestTime»: 740.7999999998137,"rumTotalRenderTime»: 775,"rumServiceResponseTime»: 218.3999999994412,"rumFormRenderTime»: 34.200000000186265,"connectionType»:"4g»,"firstContentfulPaint»: 0,"largestContentfulPaint»: 0,"locale»:"en»,"timestamp»: 1717137747981,"originalEmbedContext»: {"portalId»:"8095513»,"formId»:"6e8e5564-d82b-48c8-9136-f5474e8bb3a9»,"region»:"na1»,"target»:»#hbspt-form-94940365-8f02-4de3-a8ab-a207e5ccb9f5»,"isBuilder»: false,"isTestPage»: false,"isPreview»: false,"css»:».form { background-color: red; }»,"cssClass»:"form boost__form»,"cssRequired»:»»,"errorClass»:"form__validation-error»,"errorMessageClass»:"form__error-message»,"submitButtonClass»:"btn form__btn»,"isMobileResponsive»: true},"correlationId»:"94940365-8f02-4de3-a8ab-a207e5ccb9f5»,"renderedFieldsIds»: [«firstname»,"email»,"link_to_your_app»,"what_are_your_marketing_goals_»,"LEGAL_CONSENT.subscription_type_9875866»],"captchaStatus»:"NOT_APPLICABLE»,"emailResubscribeStatus»:"NOT_APPLICABLE»,"isInsideCrossOriginFrame»: false,"source»:"forms-embed-1.5064»,"sourceName»:"forms-embed»,"sourceVersion»:"1.5064»,"sourceVersionMajor»:"1»,"sourceVersionMinor»:"5064»,"allPageIds»: {},"_debug_embedLogLines»: [{"clientTimestamp»: 1717137652739,"level»:"INFO»,"message»:"Retrieved pageContext values which may be overriden by the embed context: {\"pageTitle\»:\"AAA Agency\»,\"pageUrl\»:\»http://localhost:8888/aaagncy.com/#form\»,\"referrer\»:\»http://localhost:8888/aaagncy.com/\»,\"userAgent\»:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36\»,\"isHubSpotCmsGeneratedPage\»: false}"}, {"clientTimestamp»: 1717137652740,"level»:"INFO»,"message»:"Retrieved countryCode property from normalized embed definition response: \"RU\""}]}'
+          /><iframe
+            name="target_iframe_6e8e5564-d82b-48c8-9136-f5474e8bb3a9"
+            style="display: none"
+          ></iframe>
+        </form>
+      </div>
     </div>
   </div>
+</section>
+<section class="boost" data-menu>
+  <div class="container"></div>
 </section>
 
       </main>
       <footer class="footer border-top">
-  <div class="container footer__container">
+  <div class="container--no-padding footer__container">
     <a
       href=""
       class="logo footer__logo"
       aria-label="AAA Agency / Influence & Special Projects"
     >
     </a>
+    <ul class="footer__nav list-reset">
+      <li class="footer__nav-item">
+        <a href="#" class="footer__nav-link">Terms of Use</a>
+      </li>
+      <li class="footer__nav-item">
+        <a href="#" class="footer__nav-link">Privacy Policy</a>
+      </li>
+    </ul>
     <span class="footer__copyright">AAA Agency © 2024</span>
   </div>
 </footer>

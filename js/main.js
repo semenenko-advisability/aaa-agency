@@ -11,13 +11,19 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_cursor_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/cursor.js */ "./src/js/components/cursor.js");
 /* harmony import */ var _components_cursor_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_cursor_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_scroll_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/scroll.js */ "./src/js/components/scroll.js");
-/* harmony import */ var _components_accordion_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/accordion.js */ "./src/js/components/accordion.js");
-/* harmony import */ var _components_accordion_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_accordion_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_video_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/video.js */ "./src/js/components/video.js");
-/* harmony import */ var _components_video_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_video_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_script_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/script.js */ "./src/js/components/script.js");
-/* harmony import */ var _components_script_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_script_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_animations_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/animations.js */ "./src/js/components/animations.js");
+/* harmony import */ var _components_animations_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_animations_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_scroll_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/scroll.js */ "./src/js/components/scroll.js");
+/* harmony import */ var _components_accordion_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/accordion.js */ "./src/js/components/accordion.js");
+/* harmony import */ var _components_accordion_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_accordion_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_video_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/video.js */ "./src/js/components/video.js");
+/* harmony import */ var _components_video_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_video_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_script_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/script.js */ "./src/js/components/script.js");
+/* harmony import */ var _components_script_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_script_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_form_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/form.js */ "./src/js/components/form.js");
+/* harmony import */ var _components_form_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_form_js__WEBPACK_IMPORTED_MODULE_6__);
+
+
 
 
 
@@ -42,7 +48,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // Определение операционной системы на мобильных
 
-console.log((0,_functions_mobile_check__WEBPACK_IMPORTED_MODULE_0__.mobileCheck)());
+// console.log(mobileCheck())
 
 // Определение ширины экрана
 // import { isMobile, isTablet, isDesktop } from './functions/check-viewport';
@@ -171,7 +177,7 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener('DOMContentLoaded', () => {
   const accordions = document.querySelectorAll('.accordion');
   const accordionContent = document.querySelector(".about__content");
-  accordionContent.style.height = document.querySelector(".accordion").querySelector('.accordion__content').scrollHeight + "px";
+  if (accordionContent) accordionContent.style.height = document.querySelector(".accordion").querySelector('.accordion__content').scrollHeight + "px";
   accordions.forEach(el => {
     el.addEventListener('click', e => {
       const self = e.currentTarget;
@@ -205,9 +211,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
   if (window.innerWidth > 576) {
-    document.querySelector(".accordion").querySelector('.accordion__control').click();
+    document.querySelector(".accordion")?.querySelector('.accordion__control').click();
   }
 });
+
+/***/ }),
+
+/***/ "./src/js/components/animations.js":
+/*!*****************************************!*\
+  !*** ./src/js/components/animations.js ***!
+  \*****************************************/
+/***/ (() => {
+
+
 
 /***/ }),
 
@@ -219,6 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 let mouseCursor = document.querySelector('.cursor');
 window.addEventListener("mousemove", cursor);
+document.querySelector('.showreel__video')?.addEventListener("mousemove", cursor);
 // document.addEventListener("scroll", cursor);
 
 document.addEventListener("mousedown", () => mouseCursor.classList.add('cursor--active'));
@@ -231,23 +248,39 @@ function cursor(e) {
 
 /***/ }),
 
+/***/ "./src/js/components/form.js":
+/*!***********************************!*\
+  !*** ./src/js/components/form.js ***!
+  \***********************************/
+/***/ (() => {
+
+// -- dev
+
+console.log('form');
+
+// /--/ dev
+
+/***/ }),
+
 /***/ "./src/js/components/script.js":
 /*!*************************************!*\
   !*** ./src/js/components/script.js ***!
   \*************************************/
 /***/ (() => {
 
-const formAnchors = document.querySelectorAll('[href*="#form"]');
+// const formAnchors = document.querySelectorAll('[href*="#form"]');
 
-// формы на мобилках вместо скролла открывают меню
-if (window.innerWidth <= 576) {
-  formAnchors.forEach(el => {
-    el.addEventListener("click", e => {
-      e.preventDefault();
-      document.querySelector('[data-burger]').click();
-    });
-  });
-}
+// // формы на мобилках вместо скролла открывают меню
+// if(window.innerWidth <= 576) {
+
+//   formAnchors.forEach(el => {
+//     el.addEventListener("click", (e) => {
+//       e.preventDefault();
+//       document.querySelector('[data-burger]').click();
+//     });
+//   });
+
+// }
 
 /***/ }),
 
@@ -858,4 +891,3 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=main.js.map
